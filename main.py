@@ -17,9 +17,6 @@ from datetime import datetime
 from discord.ext import commands
 from io import StringIO
 
-from keep_alive import keep_alive
-keep_alive()
-
 intents = discord.Intents.default()
 intents.members = True
 
