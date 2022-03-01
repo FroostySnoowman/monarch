@@ -17,8 +17,10 @@ from datetime import datetime
 from discord.ext import commands
 from io import StringIO
 
-intents = discord.Intents.default()
-intents.members = True
+from keep_alive import keep_alive
+keep_alive()
+
+intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix = [".", "m!"], intents=intents)
 client.remove_command('help')
@@ -27,7 +29,7 @@ client.remove_command('help')
 async def on_message(message):
     monarchsmp = client.get_guild(801194001361403970)
     ticketchannel = client.get_channel(840645535206998086)
-    if message.content != "m!new" and (message.channel == ticketchannel) and (message.author.id != 503641822141349888) and (message.author.id != 820823609785843783) and (message.author.id != 211166495781289985):
+    if message.content != "m!new" and (message.channel == ticketchannel) and (message.author.id != 503641822141349888) and (message.author.id != 946276610775068713) and (message.author.id != 211166495781289985):
         await message.delete()
         embed=discord.Embed(title="Message Error", url="", 
         description="You can only type `m!new` here!", 
@@ -234,7 +236,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -333,7 +335,7 @@ async def on_raw_reaction_add(payload):
 
       question4 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -383,7 +385,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -482,7 +484,7 @@ async def on_raw_reaction_add(payload):
 
       question4 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -532,7 +534,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -623,7 +625,7 @@ async def on_raw_reaction_add(payload):
 
       question3 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -673,7 +675,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -780,7 +782,7 @@ async def on_raw_reaction_add(payload):
 
       question5 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -830,7 +832,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -942,7 +944,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -1052,7 +1054,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -1163,7 +1165,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -1254,7 +1256,7 @@ async def on_raw_reaction_add(payload):
 
       question3 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -1304,7 +1306,7 @@ async def on_raw_reaction_add(payload):
                                           read_message_history=True,
                                           external_emojis=True)
 
-      staff_role = discord.utils.get(guild.roles, name="Support")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       pinged_msg_content = ""
       non_mentionable_roles = []
@@ -1395,7 +1397,7 @@ async def on_raw_reaction_add(payload):
 
       question3 = await client.wait_for('message', check=check)
 
-      staff_role = discord.utils.get(guild.roles, name="Support Team")
+      staff_role = discord.utils.get(guild.roles, name="Staff")
 
       x = f'Support will be with you shortly. \n \n||{staff_role.mention}||'
 
@@ -1500,7 +1502,7 @@ async def new(ctx, *, args=None):
 	                                     read_message_history=True,
 	                                     external_emojis=True)
 
-	staff_role = discord.utils.get(ctx.guild.roles, name="Support Team")
+	staff_role = discord.utils.get(ctx.guild.roles, name="Staff")
 
 	pinged_msg_content = ""
 	non_mentionable_roles = []
@@ -1596,7 +1598,7 @@ async def new(ctx, *, args=None):
 
 	await ticket_channel.send(embed=em)
 
-	staff_role = discord.utils.get(ctx.guild.roles, name="Support Team")
+	staff_role = discord.utils.get(ctx.guild.roles, name="Staff")
 
 	await ticket_channel.send(f'Support will be with you shortly. \n \n||Tags: {staff_role.mention}||')
 
@@ -2228,16 +2230,6 @@ async def suggestion(ctx):
     color=discord.Color.purple())
     await ctx.channel.send(embed=embed, delete_after=10)
 
-    with open("suggestions.json") as f:
-      data = json.load(f)
-
-    suggestion_number = int(data["suggestion-counter"])
-    suggestion_number += 1
-
-    data["suggestion-counter"] = int(suggestion_number)
-    with open("suggestions.json", 'w') as f:
-      json.dump(data, f)
-
     def check(message):
       return message.guild is None and message.author != client.user
 
@@ -2319,7 +2311,7 @@ async def button(ctx):
                                               read_message_history=True,
                                               external_emojis=True)
 
-      staff_role = discord.utils.get(ctx.guild.roles, name="Support Team")
+      staff_role = discord.utils.get(ctx.guild.roles, name="Staff")
 
       data["ticket-channel-ids"].append(ticket_channel.id)
 
